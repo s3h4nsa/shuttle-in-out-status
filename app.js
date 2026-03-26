@@ -65,7 +65,7 @@ document.getElementById('copy-msg-btn').addEventListener('click', ()=>{
   navigator.clipboard.writeText(textarea.value).then(()=>{
     const btn = document.getElementById('copy-msg-btn');
     const original = btn.innerText;
-    btn.innerText = 'Message Copied ✅';
+    btn.innerText = 'Message Copied';
     setTimeout(()=> btn.innerText = original,1500);
   });
 });
