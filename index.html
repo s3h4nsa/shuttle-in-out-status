@@ -3,38 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Polgasowita WH – Shuttle Tracker</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>Shuttle Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
-  <div class="logo">
-    <div class="logo-text">
-      <div class="logo-name">Polgasowita WH</div>
-      <div class="logo-sub">Shuttle Tracker</div>
-    </div>
-  </div>
-  <div class="header-right">
-    <span class="clock" id="clock">--:--:--</span>
+  <div class="logo-text">
+    <div class="logo-name">Polgasowita WH</div>
+    <div class="logo-sub">Shuttle Tracker</div>
   </div>
 </header>
 
-<!-- MAIN -->
 <main>
   <div id="categories-container"></div>
 </main>
 
-<!-- SHUTTLE CONFIRM MODAL -->
+<!-- Confirm / Preview Modal -->
 <div class="overlay" id="confirm-modal">
   <div class="modal">
     <div class="modal-title">Send WhatsApp Message?</div>
-    <div class="fg">
-      <label>Preview Message</label>
-      <textarea id="confirm-msg" readonly></textarea>
-    </div>
+    <textarea id="confirm-msg" readonly></textarea>
+    <button class="btn-secondary" id="copy-msg-btn">Copy Message</button>
     <div class="modal-btns">
       <button class="btn-secondary" onclick="closeOverlay('confirm-modal')">Cancel</button>
       <button class="btn-primary" id="confirm-send-btn">Send</button>
@@ -44,5 +35,9 @@
 
 <script src="shuttles.js"></script>
 <script src="app.js"></script>
+<script>
+function openOverlay(id){ document.getElementById(id).classList.add('open'); }
+function closeOverlay(id){ document.getElementById(id).classList.remove('open'); }
+</script>
 </body>
 </html>

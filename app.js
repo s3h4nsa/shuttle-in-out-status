@@ -1,45 +1,73 @@
-// Clock
-setInterval(()=>{document.getElementById('clock').textContent=new Date().toLocaleTimeString()},1000);
-
-// Render shuttle categories & shuttles
 const container = document.getElementById('categories-container');
 
-categories.forEach(cat=>{
-  const catDiv = document.createElement('div');
-  catDiv.className='category';
-  catDiv.innerHTML=`<div class="category-header">${cat.name}</div><div class="shuttle-grid" id="cat-${cat.id}"></div>`;
-  container.appendChild(catDiv);
+function renderCategories(){
+  container.innerHTML = '';
+  categories.forEach(cat=>{
+    const catEl = document.createElement('div');
+    catEl.classList.add('cat-section');
 
-  const grid = catDiv.querySelector('.shuttle-grid');
-  shuttles.filter(s=>s.category===cat.id).forEach(sh=>{
-    const card=document.createElement('div');
-    card.className='sh-card';
-    card.innerHTML=`
-      <div class="sh-name">${sh.name}</div>
-      <div class="sh-info">From: ${sh.from}</div>
-      <button class="sh-btn">Send WhatsApp</button>`;
-    grid.appendChild(card);
+    const header = document.createElement('div');
+    header.classList.add('cat-header');
+    header.innerHTML = `
+      <div class="cat-title">${cat.name}</div>
+      <div>&#9660;</div>
+    `;
+    catEl.appendChild(header);
 
-    const btn = card.querySelector('.sh-btn');
-    btn.addEventListener('click',()=>{
-      const time=new Date().toLocaleTimeString();
-      const msg=sh.template.replace('{name}',sh.name).replace('{from}',sh.from).replace('{time}',time);
-      openConfirmModal(msg);
+    const shuttleGrid = document.createElement('div');
+    shuttleGrid.classList.add('shuttle-grid');
+
+    shuttles.filter(sh=>sh.category===cat.id).forEach(sh=>{
+      const shEl = document.createElement('div');
+      shEl.classList.add('sh-card');
+      shEl.innerHTML = `
+        <div class="sh-name">${sh.name}</div>
+        <button class="btn-icon" onclick="previewMsg(${sh.id})">Send</button>
+      `;
+      shuttleGrid.appendChild(shEl);
     });
+
+    catEl.appendChild(shuttleGrid);
+
+    header.addEventListener('click', ()=>{
+      if(shuttleGrid.style.display==='none'){
+        shuttleGrid.style.display='grid';
+        header.querySelector('div:last-child').innerHTML='&#9660;';
+      } else {
+        shuttleGrid.style.display='none';
+        header.querySelector('div:last-child').innerHTML='&#9654;';
+      }
+    });
+
+    container.appendChild(catEl);
+  });
+}
+
+function previewMsg(shId){
+  const sh = shuttles.find(s=>s.id===shId);
+  const timestamp = new Date().toLocaleTimeString();
+  const msg = sh.template.replace('{name}', sh.name).replace('{time}', timestamp);
+
+  const textarea = document.getElementById('confirm-msg');
+  textarea.value = msg;
+  openOverlay('confirm-modal');
+
+  const sendBtn = document.getElementById('confirm-send-btn');
+  sendBtn.onclick = ()=>{
+    const url = `https://wa.me/?text=${encodeURIComponent(msg)}`;
+    window.open(url,'_blank');
+  };
+}
+
+// Copy button with feedback
+document.getElementById('copy-msg-btn').addEventListener('click', ()=>{
+  const textarea = document.getElementById('confirm-msg');
+  navigator.clipboard.writeText(textarea.value).then(()=>{
+    const btn = document.getElementById('copy-msg-btn');
+    const original = btn.innerText;
+    btn.innerText = 'Message Copied ✅';
+    setTimeout(()=> btn.innerText = original,1500);
   });
 });
 
-// Modal functions
-function openConfirmModal(msg){
-  document.getElementById('confirm-msg').value=msg;
-  document.getElementById('confirm-modal').classList.add('open');
-  const sendBtn=document.getElementById('confirm-send-btn');
-  sendBtn.onclick=()=>{ sendWhatsApp(msg); closeOverlay('confirm-modal'); }
-}
-function closeOverlay(id){ document.getElementById(id).classList.remove('open'); }
-
-// Open WhatsApp with message
-function sendWhatsApp(msg){
-  const url=`https://wa.me/?text=${encodeURIComponent(msg)}`;
-  window.open(url,'_blank');
-}
+renderCategories();
