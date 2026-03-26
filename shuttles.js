@@ -10,7 +10,7 @@ const shuttles = [
   { id:2, name:'Balangoda', category:'shuttle', template:'{name} Shuttle now in Polgasowita WH.'},
   { id:3, name:'Chilaw', category:'shuttle', template:'{name} Shuttle now in Polgasowita WH.'},
   { id:4, name:'Gampaha', category:'shuttle', template:'{name} Shuttle now in Polgasowita WH.'},
-  { id:5, name:'-', category:'shuttle', template:'{name} Shuttle now in Polgasowita WH.'},
+  { id:5, name:'test', category:'shuttle', template:'{name} Shuttle now in Polgasowita WH.'},
   { id:6, name:'Karawanella', category:'shuttle', template:'{name} Shuttle now in Polgasowita WH.'},
   { id:7, name:'Matara', category:'shuttle', template:'{name} Shuttle now in Polgasowita WH.'},
   { id:8, name:'Mathugama', category:'shuttle', template:'{name} Shuttle now in Polgasowita WH.'},
