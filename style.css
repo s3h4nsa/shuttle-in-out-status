@@ -62,7 +62,7 @@ header {
   background:rgb(255, 255, 255);
   padding:10px;
   border-radius:14px;
-  box-shadow:0 6px 6px #0000005f;
+  box-shadow:0 6px 6px #acacac5f;
   display:flex;
   justify-content:space-between;
   align-items:center;
