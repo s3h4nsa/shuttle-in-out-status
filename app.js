@@ -12,7 +12,7 @@ function renderCategories(){
     header.classList.add('cat-header');
     header.innerHTML = `
       <div class="cat-title">${cat.name}</div>
-      <div class="cat-arrow">&#9660;</div>
+      <div class="cat-arrow"></div>
     `;
     catEl.appendChild(header);
 
