@@ -195,6 +195,13 @@ header {
   color: #7f8c8d;
   margin-top: 4px;
 }
+
+/* Status bar filler for iOS */
+.status-bar {
+  height: env(safe-area-inset-top); /* iOS notch / status bar height */
+  background: linear-gradient(90deg,#1856a4,rgba(35, 142, 213, 0.96));
+}
+
 /* Smooth collapse */
 .shuttle-grid {
   display: grid;
