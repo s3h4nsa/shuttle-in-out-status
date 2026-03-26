@@ -1,33 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Shuttle Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polgasowita WH – Shuttle Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2 class="title">Shuttle Dashboard</h2>
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <div class="logo-text">
+      <div class="logo-name">Polgasowita WH</div>
+      <div class="logo-sub">Shuttle Tracker</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <span class="clock" id="clock">--:--:--</span>
+  </div>
+</header>
 
-<input id="search" placeholder="Search shuttle..." />
+<!-- MAIN -->
+<main>
+  <div id="categories-container"></div>
+</main>
 
-<div id="app"></div>
-
-<!-- CONFIRM MODAL -->
-<div id="confirmModal" class="modal">
-  <div class="modal-box">
-    <h3 id="confirmText"></h3>
-
-    <!-- MESSAGE PREVIEW -->
-    <div id="previewBox"></div>
-
-    <div class="modal-actions">
-      <button onclick="confirmSend()" class="btn yes">SEND</button>
-      <button onclick="closeModal()" class="btn no">CANCEL</button>
+<!-- SHUTTLE CONFIRM MODAL -->
+<div class="overlay" id="confirm-modal">
+  <div class="modal">
+    <div class="modal-title">Send WhatsApp Message?</div>
+    <div class="fg">
+      <label>Preview Message</label>
+      <textarea id="confirm-msg" readonly></textarea>
+    </div>
+    <div class="modal-btns">
+      <button class="btn-secondary" onclick="closeOverlay('confirm-modal')">Cancel</button>
+      <button class="btn-primary" id="confirm-send-btn">Send</button>
     </div>
   </div>
 </div>
 
-<script type="module" src="app.js"></script>
+<script src="shuttles.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

@@ -1,13 +1,17 @@
-export const SHUTTLES = [
-  { id: "negombo", name: "Negombo Shuttle", from: "Negombo", cat: "Shuttle" },
-  { id: "gampaha", name: "Gampaha Pickup", from: "Gampaha", cat: "Pickup Shuttle" },
-  { id: "colombo", name: "Colombo Branch", from: "Colombo", cat: "Branch Shuttle" },
+// Shuttle categories
+const categories = [
+  { id: 'pickup', name: 'Pickup Shuttle' },
+  { id: 'branch', name: 'Branch Shuttle' },
+  { id: 'shuttle', name: 'Shuttle' }
+];
 
-  { id: "jaela", name: "Ja-Ela Pickup", from: "Ja-Ela", cat: "Pickup Shuttle" },
-  { id: "ragama", name: "Ragama Pickup", from: "Ragama", cat: "Pickup Shuttle" },
-
-  { id: "kandy", name: "Kandy Branch", from: "Kandy", cat: "Branch Shuttle" },
-
-  { id: "internal1", name: "Internal 01", from: "WH", cat: "Shuttle" },
-  { id: "internal2", name: "Internal 02", from: "WH", cat: "Shuttle" }
+// Shuttles data
+const shuttles = [
+  { id:1, name:'Gampaha Pickup', from:'Gampaha', category:'pickup', template:'Shuttle {name} arrived from {from} at {time}.' },
+  { id:2, name:'Kelaniya Pickup', from:'Kelaniya', category:'pickup', template:'Shuttle {name} arrived from {from} at {time}.' },
+  { id:3, name:'Main Branch', from:'Warehouse', category:'branch', template:'Shuttle {name} at {from} arrived at {time}.' },
+  { id:4, name:'Branch B', from:'Branch B', category:'branch', template:'Shuttle {name} at {from} arrived at {time}.' },
+  { id:5, name:'Shuttle 1', from:'Depot', category:'shuttle', template:'Shuttle {name} from {from} reached at {time}.' },
+  { id:6, name:'Shuttle 2', from:'Depot', category:'shuttle', template:'Shuttle {name} from {from} reached at {time}.' },
+  // Add more shuttles up to 20+
 ];
