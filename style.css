@@ -119,28 +119,28 @@ header {
 
 .modal {
   background: #ffffff;
-  padding: 20px;
-  border-radius: 20px;
-  width: 90%;
+  padding: 12px;
+  border-radius: 18px;
+  width: 72%;
   max-width: 340px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
 }
 
 .modal-title {
   font-weight: 600;
-  margin-bottom: 16px;
-  font-size: 16px;
+  margin-bottom: 12px;
+  font-size: 13px;
 }
 
 .modal textarea {
-  width: 100%;
-  height: 66px;
-  border-radius: 6px;
-  border: 1px solid rgba(69, 69, 69, 0.18);
-  padding: 6px;
+  width: 96%;
+  height: 50px;
+  border-radius: 7px;
+  border: -1px solid rgba(69, 69, 69, 0.18);
+  padding: 4px;
   resize: none;
-  font-size: 14px;
-  margin-bottom: 14px;
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 
 /* Modal Buttons */
