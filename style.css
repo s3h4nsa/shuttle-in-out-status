@@ -3,14 +3,14 @@ body {
   font-family: 'Outfit', sans-serif;
   margin:0;
   padding:0;
-  background: #f5f7fa;
+  background: #ffffff;
 }
 
 /* Header */
 header {
   padding: 14px 18px;
-  background: linear-gradient(90deg,#27ae60,#2ecc71);
-  color: #fff;
+  background: linear-gradient(90deg,#1856a4,rgba(35, 142, 213, 0.96));
+  color: #ffffff;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
@@ -30,8 +30,8 @@ header {
   margin:18px 10px;
   border-radius:9px;
   overflow:hidden;
-  background:#fff;
-  box-shadow:0 2px 5px rgba(0, 0, 0, 0.12);
+  background:#efefef;
+  box-shadow:0 2px 5px rgba(255, 255, 255, 0);
 }
 
 .cat-header {
@@ -40,13 +40,11 @@ header {
   align-items:center;
   padding:16px 25px;
   cursor:pointer;
-  background:#ecf0f1;
+  background:rgba(205, 205, 205, 0.59);
   transition: background 0.3s;
 }
 
-.cat-header:hover {
-  background:#ffffff;
-}
+
 
 .cat-title {
   font-weight:501;
