@@ -9,10 +9,10 @@ body {
 
 /* Header */
 header {
-  padding: 14px 18px;
+  padding: 26px 24px;
   background: linear-gradient(90deg, #1856a4, rgba(35, 142, 213, 0.96));
   color: #ffffff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0);
 }
 
 .logo-text .logo-name {
@@ -258,6 +258,4 @@ header {
   transform: scale(0.96);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.171);
 }
-.live-datetime {
-  
-}
+
