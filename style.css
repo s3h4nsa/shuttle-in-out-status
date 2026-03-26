@@ -1,0 +1,161 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f3f4f6;
+  margin: 0;
+  padding: 14px;
+}
+
+.title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* SEARCH FIXED */
+#search {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 14px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* CATEGORY */
+.cat {
+  margin-bottom: 14px;
+}
+
+.cat-header {
+  background: #111;
+  color: white;
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.cat-body {
+  margin-top: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+.cat.collapsed .cat-body {
+  display: none;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: 0.15s;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.card strong {
+  font-size: 17px;
+}
+
+/* COLORS */
+.card.pickup { border-left: 6px solid #2563eb; }
+.card.branch { border-left: 6px solid #7c3aed; }
+.card.shuttle { border-left: 6px solid #16a34a; }
+
+/* TAP */
+.card:active {
+  transform: scale(0.96);
+  background: #111;
+  color: white;
+}
+
+.card.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-box {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  width: 92%;
+  max-width: 340px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.btn.yes {
+  background: #16a34a;
+  color: white;
+}
+
+.btn.no {
+  background: #e5e7eb;
+}
+
+/* PREVIEW BOX */
+#previewBox {
+  margin-top: 10px;
+  padding: 12px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  font-size: 13px;
+  white-space: pre-wrap;
+}
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(50px);
+  background: #111;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
