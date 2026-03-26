@@ -45,7 +45,15 @@ function renderCategories(){
 
 function previewMsg(shId){
   const sh = shuttles.find(s=>s.id===shId);
-  const timestamp = new Date().toLocaleTimeString();
+
+  // Get time in 12-hour format with AM/PM
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes().toString().padStart(2,'0');
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+  const hour12 = hours % 12 === 0 ? 12 : hours % 12;
+  const timestamp = `${hour12}:${minutes} ${ampm}`;
+
   const msg = sh.template.replace('{name}', sh.name).replace('{time}', timestamp);
 
   const textarea = document.getElementById('confirm-msg');
