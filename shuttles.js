@@ -35,6 +35,7 @@ const shuttles = [
   { id:26, name:'U Drop', category:'pickup', template:'{name} Pickup Shuttle now in Polgasowita WH {time}.'},
   { id:27, name:'Wellampitiya', category:'pickup', template:'{name} Pickup Shuttle now in Polgasowita WH {time}.'},
   { id:28, name:'Wattala', category:'pickup', template:'{name} Pickup Shuttle now in Polgasowita WH {time}.'},
+  { id:29, name:'kaduwela', category:'pickup', template:'{name} Pickup Shuttle now in Polgasowita WH {time}.'},
 
 // Branch Shuttles
   { id:29, name:'Kadawatha', category:'branch', template:'{name} Branch Shuttle now in Polgasowita WH {time}.'},
