@@ -28,10 +28,10 @@ header {
 
 /* Categories */
 .cat-section {
-  margin: 18px 10px;
-  border-radius: 12px;
+  margin: 25px 30px;
+  border-radius: 10px;
   overflow: hidden;
-  background: #f7f7f7;
+  background: rgba(0, 0, 0, 0.05);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
@@ -47,12 +47,13 @@ header {
 }
 
 .cat-header:hover {
-  background: rgba(205, 205, 205, 0.3);
+  background: rgba(0, 0, 0, 0.17);
 }
 
 .cat-title {
-  font-weight: 600;
+  font-weight: 630;
   font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, 
 }
 
 /* Shuttle Grid */
@@ -65,14 +66,20 @@ header {
 
 .sh-card {
   background: #ffffff;
-  padding: 12px;
-  border-radius: 16px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 11px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14);
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: transform 0.15s, box-shadow 0.15s;
   cursor: pointer;
+  font-family:monospace;
+  font-size: 16px;
+  font-weight: 527;
+ 
+  
+  
 }
 
 .sh-card:active {
