@@ -100,3 +100,24 @@ document.getElementById('copy-msg-btn').addEventListener('click', ()=>{
 });
 
 renderCategories();
+
+function updateDateTime(){
+  const now = new Date();
+
+  const days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  const day = days[now.getDay()];
+
+  const h = now.getHours();
+  const m = now.getMinutes().toString().padStart(2,'0');
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  const hh = h % 12 || 12;
+
+  const time = `${hh}:${m} ${ampm}`;
+
+  const final = `${day}, ${time}`;
+
+  document.getElementById('live-datetime').textContent = final;
+}
+
+setInterval(updateDateTime, 1000);
+updateDateTime();

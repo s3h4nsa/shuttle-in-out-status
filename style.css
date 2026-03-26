@@ -21,9 +21,9 @@ header {
 }
 
 .logo-text .logo-sub {
-  font-size: 11px;
-  color: #dff0d8;
-  margin-top: 2px;
+   font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.7px;
 }
 
 /* Categories */
@@ -65,26 +65,22 @@ header {
 }
 
 .sh-card {
-  background: #ffffff;
-  padding: 10px;
-  border-radius: 11px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14);
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: transform 0.15s, box-shadow 0.15s;
+  transition: all 0.2s ease;
   cursor: pointer;
-  font-family:monospace;
-  font-size: 16px;
-  font-weight: 527;
- 
-  
-  
 }
 
+/* touch effect */
 .sh-card:active {
-  transform: scale(0.97);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  transform: scale(0.96);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
 }
 
 /* Buttons */
@@ -123,8 +119,8 @@ header {
 
 .modal {
   background: #ffffff;
-  padding: 18px;
-  border-radius: 18px;
+  padding: 20px;
+  border-radius: 20px;
   width: 90%;
   max-width: 340px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
@@ -210,7 +206,26 @@ header {
   overflow: hidden;
   transition: all 0.3s ease;
 }
+.logo-row {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* space between text + time */
+  margin-top: 7px;
+}
 
+.live-datetime {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding-right: 0px
+    
+}
+#date-time {
+  font-size: 11px;
+  color: rgba(255,255,255,0.75);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
 /* collapsed state */
 .cat-section.collapsed .shuttle-grid {
   max-height: 0;
@@ -235,4 +250,7 @@ header {
 .sh-card:active {
   transform: scale(0.96);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.171);
+}
+.live-datetime {
+  
 }
