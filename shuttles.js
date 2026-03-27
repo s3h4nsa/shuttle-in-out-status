@@ -39,5 +39,7 @@ const shuttles = [
   { id:26, name:'Kadawatha', category:'branch', template:'{name} Branch Shuttle now in Polgasowita Warehouse.'},
   { id:27, name:'Piliyandala', category:'branch', template:'{name} Branch Shuttle now in Polgasowita Warehouse.'},
 
-  shuttles.sort((a, b) => a.name.localeCompare(b.name))
 ];
+
+ shuttles.sort((a, b) => a.name.localeCompare(b.name))
+ 
