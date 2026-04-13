@@ -29,12 +29,13 @@ const shuttles = [
   { id:18, name:'Matugama', category:'pickup', template:'{name} Pickup Shuttle now in Polgasowita Warehouse.'},
   { id:19, name:'Moratuwa', category:'pickup', template:'{name} Pickup Shuttle now in Polgasowita Warehouse.'},
   { id:20, name:'Panadura', category:'pickup', template:'{name} Pickup Shuttle now in Polgasowita Warehouse.'},
+  { id:28, name:'Pannipitiya', category:'pickup', template:'{name} Pickup Shuttle now in Polgasowita Warehouse.'},
   { id:21, name:'Piliyandala', category:'pickup', template:'{name} Pickup Shuttle now in Polgasowita Warehouse.'},
   { id:22, name:'Rajagiriya', category:'pickup', template:'{name} Pickup Shuttle now in Polgasowita Warehouse.'},
   { id:23, name:'U Drop', category:'pickup', template:'{name} Pickup Shuttle now in Polgasowita Warehouse.'},
   { id:24, name:'Wellampitiya', category:'pickup', template:'{name} Pickup Shuttle now in Polgasowita Warehouse.'},
   { id:25, name:'Wattala', category:'pickup', template:'{name} Pickup Shuttle now in Polgasowita Warehouse.'},
-
+  
 // Branch Shuttles
   { id:26, name:'Kadawatha', category:'branch', template:'{name} Branch Shuttle now in Polgasowita Warehouse.'},
   { id:27, name:'Piliyandala', category:'branch', template:'{name} Branch Shuttle now in Polgasowita Warehouse.'},
